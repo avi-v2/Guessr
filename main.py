@@ -1,18 +1,7 @@
 import random
-import pygame
-import os
-pygame.init()
-pygame.mixer.init()
-def play_sound(filename):
-    filepath = os.path.join(os.path.dirname(__file__), filename)
-    pygame.mixer.music.load(filepath)
-    pygame.mixer.music.play()
-    
-def winsound():
-    play_sound("w.wav")
 
-def losesound():
-    play_sound("l.wav")
+    
+
 x=int(input("Enter the max  value of Target:  "))
 attempts=0
 def check(x):
@@ -27,15 +16,12 @@ def check(x):
             if inp==target:
                 print("You won!")
                 print(f"attempts={attempts}")
-                winsound()
+                
                 break
             elif inp< target:
-                losesound()
                 print ("Target is larger than your guess.")
             elif inp> target:
-                losesound()
                 print ("Target is smaller than your guess.")
-       
         except ValueError :
             print("Invalid input")   
             
