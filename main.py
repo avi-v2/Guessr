@@ -13,10 +13,10 @@ def winsound():
 
 def losesound():
     play_sound("l.wav")
-
+x=int(input("Enter the max  value of Target:  "))
 attempts=0
-def check():
-    target = (random.randint(1,100))
+def check(x):
+    target = (random.randint(1,x))
     global attempts
     attempts=0
     while True: 
@@ -39,7 +39,7 @@ def check():
             print("Invalid input")   
             
 while True:
-    check()
+    check(x)
     try:
         a=int(input("Press 1 to play again or any other key to quit:  "))
 
