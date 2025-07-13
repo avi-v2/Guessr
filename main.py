@@ -16,6 +16,7 @@ def losesound():
 x=int(input("Enter the max  value of Target:  "))
 attempts=0
 def check(x):
+    
     target = (random.randint(1,x))
     global attempts
     attempts=0
